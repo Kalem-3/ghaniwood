@@ -48,9 +48,9 @@ const i18n = {
     gallery_sub:   "A selection of completed projects — each one finished to the highest standard.",
     gallery_note:  "Add your own project photos to the images/ folder to display them here.",
     // Contact
-    contact_tag:          "Get in Touch",
-    contact_title:        "Contact Us",
-    contact_sub:          "Have a project in mind? Reach out for a free consultation and quote.",
+    contact_tag:            "Get in Touch",
+    contact_title:          "Contact Us",
+    contact_sub:            "Have a project in mind? Reach out for a free consultation and quote.",
     contact_location_label: "Location",
     contact_phone_label:    "Phone",
     contact_whatsapp:       "Message on WhatsApp",
@@ -108,9 +108,9 @@ const i18n = {
     gallery_title: "Unsere Arbeiten",
     gallery_sub:   "Eine Auswahl abgeschlossener Projekte — jedes auf höchstem Niveau fertiggestellt.",
     gallery_note:  "Fügen Sie Ihre eigenen Projektfotos in den Ordner images/ ein, um sie hier anzuzeigen.",
-    contact_tag:          "Kontakt",
-    contact_title:        "Kontaktieren Sie uns",
-    contact_sub:          "Haben Sie ein Projekt? Schreiben Sie uns für eine kostenlose Beratung.",
+    contact_tag:            "Kontakt",
+    contact_title:          "Kontaktieren Sie uns",
+    contact_sub:            "Haben Sie ein Projekt? Schreiben Sie uns für eine kostenlose Beratung.",
     contact_location_label: "Standort",
     contact_phone_label:    "Telefon",
     contact_whatsapp:       "WhatsApp schreiben",
@@ -155,8 +155,8 @@ const i18n = {
     s2_title: "IKEA Montajı",
     s2_desc:  "IKEA mobilya uzmanıyız. Her IKEA ürününü hızlı ve eksiksiz monte ediyoruz.",
     s3_title: "Özel Ahşap İşleri",
-    s4_title: "Mutfak Kurulumu",
     s3_desc:  "İhtiyaçlarınıza özel ölçüde raf, dolap ve mobilya üretimi.",
+    s4_title: "Mutfak Kurulumu",
     s4_desc:  "Dolap, tezgah ve tüm detaylarıyla eksiksiz mutfak kurulumu.",
     s5_title: "İç Mekan Düzenleme",
     s5_desc:  "Kapı, süpürgelik, zemin döşeme ve tüm iç mekan marangozluk işleri.",
@@ -166,9 +166,9 @@ const i18n = {
     gallery_title: "Çalışmalarımız",
     gallery_sub:   "Tamamlanmış projelerden bir seçki — her biri en yüksek standartta bitirilmiş.",
     gallery_note:  "Kendi proje fotoğraflarınızı images/ klasörüne ekleyerek burada görüntüleyebilirsiniz.",
-    contact_tag:          "İletişim",
-    contact_title:        "Bize Ulaşın",
-    contact_sub:          "Bir projeniz mi var? Ücretsiz danışmanlık için hemen yazın.",
+    contact_tag:            "İletişim",
+    contact_title:          "Bize Ulaşın",
+    contact_sub:            "Bir projeniz mi var? Ücretsiz danışmanlık için hemen yazın.",
     contact_location_label: "Konum",
     contact_phone_label:    "Telefon",
     contact_whatsapp:       "WhatsApp'tan Yazın",
@@ -195,23 +195,17 @@ function applyLanguage(lang) {
   localStorage.setItem("ghaniwood_lang", lang);
   const t = i18n[lang];
 
-  // Text content
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (t[key] !== undefined) el.textContent = t[key];
   });
-
-  // Placeholders
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
     const key = el.getAttribute("data-i18n-placeholder");
     if (t[key] !== undefined) el.placeholder = t[key];
   });
-
-  // Active button
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
   });
-
   document.documentElement.lang = lang;
 }
 
@@ -233,7 +227,6 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("open");
   navLinks.classList.toggle("open");
 });
-
 navLinks.querySelectorAll("a").forEach(a => {
   a.addEventListener("click", () => {
     hamburger.classList.remove("open");
