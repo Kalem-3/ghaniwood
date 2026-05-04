@@ -3,12 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GhaniWood – Carpentry & Furniture Assembly</title>
-  <meta name="description" content="Professional carpentry and furniture assembly in Germany. Custom woodwork, IKEA assembly, kitchen installation." />
+  <title>GhaniWood – Carpentry & Furniture Assembly in Germany</title>
+  <meta name="description" content="Professional carpentry and furniture assembly in Germany. Custom woodwork, IKEA assembly, kitchen installation. Serving Duisburg, Düsseldorf, Köln and all NRW." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="css/style.css?v=3" />
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "GhaniWood",
+    "description": "Professional carpentry, custom woodwork, IKEA assembly, and furniture installation service in Germany.",
+    "url": "https://ghaniwood.de",
+    "telephone": "+905304589383",
+    "email": "kaplanbugra.turkey@gmail.com",
+    "image": "https://images.unsplash.com/photo-1538688423619-a81d3f23454b?w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Duisburg",
+      "addressRegion": "Nordrhein-Westfalen",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.4344,
+      "longitude": 6.7623
+    },
+    "areaServed": [
+      {"@type": "City", "name": "Duisburg"},
+      {"@type": "City", "name": "Düsseldorf"},
+      {"@type": "City", "name": "Köln"},
+      {"@type": "City", "name": "Essen"},
+      {"@type": "City", "name": "Dortmund"},
+      {"@type": "City", "name": "Bochum"},
+      {"@type": "City", "name": "Wuppertal"},
+      {"@type": "City", "name": "Gelsenkirchen"},
+      {"@type": "City", "name": "Oberhausen"},
+      {"@type": "City", "name": "Krefeld"},
+      {"@type": "City", "name": "Mönchengladbach"},
+      {"@type": "City", "name": "Leverkusen"},
+      {"@type": "City", "name": "Bonn"},
+      {"@type": "City", "name": "Aachen"},
+      {"@type": "City", "name": "Münster"},
+      {"@type": "City", "name": "Hagen"},
+      {"@type": "City", "name": "Hamm"},
+      {"@type": "City", "name": "Solingen"},
+      {"@type": "City", "name": "Remscheid"},
+      {"@type": "City", "name": "Mülheim an der Ruhr"},
+      {"@type": "City", "name": "Bottrop"},
+      {"@type": "City", "name": "Recklinghausen"}
+    ],
+    "priceRange": "€€",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -21,11 +86,12 @@
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#home"     data-i18n="nav_home"></a>
-        <a href="#about"    data-i18n="nav_about"></a>
-        <a href="#services" data-i18n="nav_services"></a>
-        <a href="#gallery"  data-i18n="nav_gallery"></a>
-        <a href="#contact"  data-i18n="nav_contact"></a>
+        <a href="#home"          data-i18n="nav_home"></a>
+        <a href="#about"         data-i18n="nav_about"></a>
+        <a href="#services"      data-i18n="nav_services"></a>
+        <a href="#gallery"       data-i18n="nav_gallery"></a>
+        <a href="#testimonials"  data-i18n="nav_testimonials"></a>
+        <a href="#contact"       data-i18n="nav_contact"></a>
       </nav>
 
       <div class="nav-right">
@@ -53,9 +119,7 @@
         <a href="#contact"  class="btn btn-outline" data-i18n="hero_btn2"></a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span></span>
-    </div>
+    <div class="hero-scroll-hint"><span></span></div>
   </section>
 
   <!-- ░░ ABOUT ░░ -->
@@ -64,7 +128,7 @@
       <div class="about-grid">
         <div class="about-img reveal">
           <div class="img-frame">
-            <img src="https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=800&q=80" alt="GhaniWood craftsman" />
+            <img src="https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=800&q=80" alt="GhaniWood craftsman at work" />
             <div class="img-badge">
               <span class="badge-num">10+</span>
               <span class="badge-label" data-i18n="about_badge"></span>
@@ -139,14 +203,95 @@
         <p  data-i18n="gallery_sub"></p>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item reveal" style="--delay:.0s"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=80" alt="Furniture assembly" /></div>
-        <div class="gallery-item reveal large" style="--delay:.1s"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80" alt="Custom sofa" /></div>
-        <div class="gallery-item reveal" style="--delay:.2s"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Kitchen installation" /></div>
-        <div class="gallery-item reveal" style="--delay:.3s"><img src="https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=800&q=80" alt="Woodwork detail" /></div>
-        <div class="gallery-item reveal large" style="--delay:.4s"><img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=1200&q=80" alt="Modern kitchen" /></div>
-        <div class="gallery-item reveal" style="--delay:.5s"><img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?w=800&q=80" alt="Carpentry tools" /></div>
+        <div class="gallery-item reveal" style="--delay:.0s">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Furniture assembly result" />
+        </div>
+        <div class="gallery-item reveal large" style="--delay:.1s">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80" alt="Custom sofa installation" />
+        </div>
+        <div class="gallery-item reveal" style="--delay:.2s">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80" alt="Modern kitchen installation" />
+        </div>
+        <div class="gallery-item reveal" style="--delay:.3s">
+          <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80" alt="Custom woodwork and shelving" />
+        </div>
+        <div class="gallery-item reveal large" style="--delay:.4s">
+          <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=1200&q=80" alt="Complete kitchen fitting" />
+        </div>
+        <div class="gallery-item reveal" style="--delay:.5s">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80" alt="Professional carpentry tools" />
+        </div>
       </div>
-      <p class="gallery-note reveal" data-i18n="gallery_note"></p>
+    </div>
+  </section>
+
+  <!-- ░░ TESTIMONIALS ░░ -->
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="testimonials_tag"></span>
+        <h2 data-i18n="testimonials_title"></h2>
+        <p data-i18n="testimonials_sub"></p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="review1_text"></p>
+          <div class="testimonial-author">
+            <div class="author-avatar">KM</div>
+            <div class="author-info">
+              <strong data-i18n="review1_name"></strong>
+              <span data-i18n="review1_location"></span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="review2_text"></p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SK</div>
+            <div class="author-info">
+              <strong data-i18n="review2_name"></strong>
+              <span data-i18n="review2_location"></span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="review3_text"></p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AB</div>
+            <div class="author-info">
+              <strong data-i18n="review3_name"></strong>
+              <span data-i18n="review3_location"></span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text" data-i18n="review4_text"></p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PW</div>
+            <div class="author-info">
+              <strong data-i18n="review4_name"></strong>
+              <span data-i18n="review4_location"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials-cta reveal">
+        <p data-i18n="review_cta_text"></p>
+        <div class="cta-btns">
+          <a href="https://wa.me/905304589383?text=Merhaba%2C%20GhaniWood%20hakk%C4%B1nda%20bir%20yorum%20b%C4%B1rakmak%20istiyorum."
+             class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span data-i18n="review_cta_btn"></span>
+          </a>
+          <a href="#contact" class="btn btn-primary" data-i18n="review_contact_btn"></a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -164,14 +309,14 @@
             <span class="contact-icon">📍</span>
             <div>
               <strong data-i18n="contact_location_label"></strong>
-              <span>Duisburg</span>
+              <span>Duisburg, Deutschland</span>
             </div>
           </div>
           <div class="contact-item">
             <span class="contact-icon">📞</span>
             <div>
               <strong data-i18n="contact_phone_label"></strong>
-              <a href="tel:+905304589383">+90 530 458 9383</a>
+              <a href="tel:+905304589383">+90 530 458 93 83</a>
             </div>
           </div>
           <div class="contact-item">
@@ -181,13 +326,52 @@
               <a href="mailto:kaplanbugra.turkey@gmail.com">kaplanbugra.turkey@gmail.com</a>
             </div>
           </div>
-          <a href="https://wa.me/90530458938363" class="btn btn-whatsapp" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+
+          <!-- Service Areas -->
+          <div class="service-areas">
+            <strong class="areas-label" data-i18n="areas_label"></strong>
+            <div class="areas-tags">
+              <span>Duisburg</span>
+              <span>Düsseldorf</span>
+              <span>Köln</span>
+              <span>Essen</span>
+              <span>Dortmund</span>
+              <span>Bochum</span>
+              <span>Wuppertal</span>
+              <span>Gelsenkirchen</span>
+              <span>Oberhausen</span>
+              <span>Krefeld</span>
+              <span>Mönchengladbach</span>
+              <span>Mülheim a.d.R.</span>
+              <span>Leverkusen</span>
+              <span>Bonn</span>
+              <span>Aachen</span>
+              <span>Münster</span>
+              <span>Hagen</span>
+              <span>Solingen</span>
+              <span>Remscheid</span>
+              <span>Bottrop</span>
+              <span>Recklinghausen</span>
+              <span>Hamm</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/905304589383" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
             <span data-i18n="contact_whatsapp"></span>
           </a>
         </div>
 
-        <form class="contact-form reveal" id="contactForm">
+        <!-- Contact form – Web3Forms (ücretsiz, kayıt gerekmez) -->
+        <!-- KURULUM: web3forms.com adresine gir → e-postanı yaz → access key al → aşağıdaki VALUE kısmına yapıştır -->
+        <form class="contact-form reveal" id="contactForm"
+              action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="BURAYA_WEB3FORMS_KEY_YAZIN" />
+          <input type="hidden" name="subject" value="GhaniWood – Neue Kontaktanfrage" />
+          <input type="hidden" name="redirect" value="false" />
+          <input type="checkbox" name="botcheck" style="display:none" />
           <div class="form-row">
             <div class="form-group">
               <label data-i18n="form_name"></label>
@@ -199,6 +383,10 @@
             </div>
           </div>
           <div class="form-group">
+            <label data-i18n="form_phone"></label>
+            <input type="tel" name="phone" data-i18n-placeholder="form_phone_ph" />
+          </div>
+          <div class="form-group">
             <label data-i18n="form_subject"></label>
             <input type="text" name="subject" data-i18n-placeholder="form_subject_ph" />
           </div>
@@ -206,8 +394,9 @@
             <label data-i18n="form_message"></label>
             <textarea name="message" rows="5" required data-i18n-placeholder="form_message_ph"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" data-i18n="form_send"></button>
+          <button type="submit" class="btn btn-primary" id="submitBtn" data-i18n="form_send"></button>
           <p class="form-success" id="formSuccess" data-i18n="form_success"></p>
+          <p class="form-error"   id="formError"   data-i18n="form_error"></p>
         </form>
       </div>
     </div>
@@ -225,6 +414,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=3"></script>
 </body>
 </html>
