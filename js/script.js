@@ -333,7 +333,7 @@ document.getElementById("contactForm").addEventListener("submit", async e => {
     });
     const data = await res.json();
 
-    if (data.result === "success") {
+    if (data.success === true || data.result === "success") {
       success.style.display = "block";
       form.reset();
     } else {
