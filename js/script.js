@@ -326,14 +326,13 @@ document.getElementById("contactForm").addEventListener("submit", async e => {
   submitBtn.textContent = "...";
 
   try {
-    const res  = await fetch(form.action, {
+    const res = await fetch(form.action, {
       method:  "POST",
       body:    new FormData(form),
       headers: { "Accept": "application/json" },
     });
-    const data = await res.json();
 
-    if (data.success === true || data.result === "success") {
+    if (res.ok) {
       success.style.display = "block";
       form.reset();
     } else {
