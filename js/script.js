@@ -80,8 +80,13 @@ const i18n = {
     form_send:       "Send Message",
     form_success:    "Message sent! We will be in touch shortly — usually within a few hours.",
     form_error:      "Something went wrong. Please contact us via WhatsApp or email directly.",
-    footer_rights:  "All rights reserved.",
-    footer_tagline: "Built with care. Finished to last.",
+    footer_rights:      "All rights reserved.",
+    footer_tagline:     "Built with care. Finished to last.",
+    footer_impressum:   "Legal Notice",
+    footer_datenschutz: "Privacy Policy",
+    cookie_text:    "This website stores your language preference locally in your browser. No tracking cookies are used. Images are loaded from Unsplash CDN and contact form submissions are processed via Web3Forms.",
+    cookie_accept:  "Got it",
+    cookie_more:    "Privacy Policy",
   },
 
   de: {
@@ -160,8 +165,13 @@ const i18n = {
     form_send:       "Nachricht senden",
     form_success:    "Nachricht gesendet! Wir melden uns in Kürze — in der Regel innerhalb weniger Stunden.",
     form_error:      "Ein Fehler ist aufgetreten. Bitte kontaktieren Sie uns direkt per WhatsApp oder E-Mail.",
-    footer_rights:  "Alle Rechte vorbehalten.",
-    footer_tagline: "Mit Sorgfalt gebaut. Für die Ewigkeit gemacht.",
+    footer_rights:      "Alle Rechte vorbehalten.",
+    footer_tagline:     "Mit Sorgfalt gebaut. Für die Ewigkeit gemacht.",
+    footer_impressum:   "Impressum",
+    footer_datenschutz: "Datenschutz",
+    cookie_text:    "Diese Website speichert Ihre Sprachpräferenz lokal in Ihrem Browser. Es werden keine Tracking-Cookies verwendet. Bilder werden über das Unsplash-CDN geladen, Kontaktformulardaten über Web3Forms übermittelt.",
+    cookie_accept:  "Verstanden",
+    cookie_more:    "Datenschutzerklärung",
   },
 
   tr: {
@@ -240,8 +250,13 @@ const i18n = {
     form_send:       "Mesaj Gönder",
     form_success:    "Mesajınız iletildi! Kısa süre içinde — genellikle birkaç saat içinde — size döneceğiz.",
     form_error:      "Bir hata oluştu. Lütfen WhatsApp veya e-posta ile doğrudan ulaşın.",
-    footer_rights:  "Tüm hakları saklıdır.",
-    footer_tagline: "Özenle yapılmış. Ömür boyu dayanıklı.",
+    footer_rights:      "Tüm hakları saklıdır.",
+    footer_tagline:     "Özenle yapılmış. Ömür boyu dayanıklı.",
+    footer_impressum:   "Künye",
+    footer_datenschutz: "Gizlilik Politikası",
+    cookie_text:    "Bu web sitesi dil tercihinizi yalnızca tarayıcınızda yerel olarak saklar. İzleme çerezi kullanılmamaktadır. Görseller Unsplash CDN üzerinden yüklenmekte, iletişim formu verileri Web3Forms aracılığıyla iletilmektedir.",
+    cookie_accept:  "Anladım",
+    cookie_more:    "Gizlilik Politikası",
   },
 };
 
@@ -311,7 +326,7 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-// ── Contact form – Formspree ───────────────────
+// ── Contact form ───────────────────────────────
 document.getElementById("contactForm").addEventListener("submit", async e => {
   e.preventDefault();
   const form      = e.target;
@@ -349,6 +364,19 @@ document.getElementById("contactForm").addEventListener("submit", async e => {
     }, 6000);
   }
 });
+
+// ── Cookie notice ──────────────────────────────
+(function () {
+  const banner = document.getElementById("cookieBanner");
+  if (!banner) return;
+  if (!localStorage.getItem("gw_cookie_ok")) {
+    setTimeout(() => banner.classList.add("visible"), 900);
+    document.getElementById("cookieAccept").addEventListener("click", () => {
+      localStorage.setItem("gw_cookie_ok", "1");
+      banner.classList.remove("visible");
+    });
+  }
+})();
 
 // ── Init ───────────────────────────────────────
 applyLanguage(currentLang);

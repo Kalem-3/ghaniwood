@@ -647,6 +647,54 @@ h3 { font-size: 1.25rem; }
 }
 
 /* ────────────────────────────────────────────
+   COOKIE BANNER
+──────────────────────────────────────────── */
+.cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 2000;
+  background: var(--wood-dark);
+  border-top: 2px solid var(--wood-mid);
+  padding: 1.1rem 0;
+  transform: translateY(100%);
+  transition: transform .45s cubic-bezier(.4,0,.2,1);
+}
+.cookie-banner.visible {
+  transform: translateY(0);
+}
+.cookie-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cookie-inner p {
+  flex: 1;
+  font-size: .9rem;
+  color: rgba(255,255,255,.8);
+  min-width: 200px;
+  margin: 0;
+}
+.cookie-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+.cookie-link {
+  font-size: .85rem;
+  color: var(--wood-light);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.cookie-link:hover { color: var(--white); }
+.cookie-banner .btn-primary {
+  padding: .55rem 1.4rem;
+  font-size: .85rem;
+  white-space: nowrap;
+}
+
+/* ────────────────────────────────────────────
    FOOTER
 ──────────────────────────────────────────── */
 .footer {
@@ -665,6 +713,19 @@ h3 { font-size: 1.25rem; }
 .footer .logo { font-size: 1.4rem; }
 .footer-copy    { color: rgba(255,255,255,.45); font-size: .85rem; }
 .footer-tagline { color: rgba(255,255,255,.3);  font-size: .8rem;  font-style: italic; }
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: .25rem;
+}
+.footer-legal a {
+  font-size: .8rem;
+  color: rgba(255,255,255,.4);
+  transition: color var(--transition);
+}
+.footer-legal a:hover { color: var(--wood-light); }
+.footer-sep { color: rgba(255,255,255,.2); font-size: .8rem; }
 
 /* ────────────────────────────────────────────
    RESPONSIVE
