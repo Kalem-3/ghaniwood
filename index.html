@@ -10,10 +10,12 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>" />
   <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>" />
 
-  <!-- Fonts – lokal gehostet, DSGVO-konform -->
-  <link rel="stylesheet" href="css/fonts.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
 
   <!-- Schema.org LocalBusiness -->
   <script type="application/ld+json">
@@ -22,7 +24,7 @@
     "@type": "HomeAndConstructionBusiness",
     "name": "GhaniWood",
     "description": "Professional carpentry, custom woodwork, IKEA assembly, and furniture installation service in Germany.",
-    "url": "https://ghaniwood.com",
+    "url": "https://ghaniwood.de",
     "telephone": "+905304589383",
     "email": "kaplanbugra.turkey@gmail.com",
     "image": "https://images.unsplash.com/photo-1538688423619-a81d3f23454b?w=1200&q=80",
@@ -74,17 +76,6 @@
   </script>
 </head>
 <body>
-
-  <!-- ░░ COOKIE NOTICE ░░ -->
-  <div id="cookieBanner" class="cookie-banner">
-    <div class="cookie-inner container">
-      <p data-i18n="cookie_text"></p>
-      <div class="cookie-actions">
-        <a href="datenschutz.html" class="cookie-link" data-i18n="cookie_more"></a>
-        <button id="cookieAccept" class="btn btn-primary" data-i18n="cookie_accept"></button>
-      </div>
-    </div>
-  </div>
 
   <!-- ░░ NAVBAR ░░ -->
   <header id="navbar">
@@ -376,6 +367,8 @@
           </a>
         </div>
 
+        <!-- Contact form – Web3Forms (ücretsiz, kayıt gerekmez) -->
+        <!-- KURULUM: web3forms.com adresine gir → e-postanı yaz → access key al → aşağıdaki VALUE kısmına yapıştır -->
         <form class="contact-form reveal" id="contactForm"
               action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="bb76e852-f7a0-4ad8-8259-e1b401d922b9" />
@@ -421,14 +414,9 @@
       </div>
       <p class="footer-copy">© 2025 GhaniWood. <span data-i18n="footer_rights"></span></p>
       <p class="footer-tagline" data-i18n="footer_tagline"></p>
-      <nav class="footer-legal">
-        <a href="impressum.html" data-i18n="footer_impressum"></a>
-        <span class="footer-sep">·</span>
-        <a href="datenschutz.html" data-i18n="footer_datenschutz"></a>
-      </nav>
     </div>
   </footer>
 
-  <script src="js/script.js?v=4"></script>
+  <script src="js/script.js?v=3"></script>
 </body>
 </html>
