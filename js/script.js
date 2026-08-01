@@ -68,9 +68,9 @@
   let currentLang = safeStorage.get('ghaniwood-lang') || 'de';
 
   const langMeta = {
-    de:{code:'DE',flag:'🇩🇪'},
-    en:{code:'EN',flag:'🇬🇧'},
-    tr:{code:'TR',flag:'🇹🇷'}
+    de:{code:'DE',flag:'assets/icons/flag-de.svg'},
+    en:{code:'EN',flag:'assets/icons/flag-en.svg'},
+    tr:{code:'TR',flag:'assets/icons/flag-tr.svg'}
   };
 
   const applyLanguage = (lang) => {
@@ -93,7 +93,7 @@
     const currentMeta = langMeta[lang] || langMeta.de;
     const currentFlag = languageCurrent.querySelector('.lang-flag');
     const currentCode = languageCurrent.querySelector('.lang-code');
-    if (currentFlag) currentFlag.textContent = currentMeta.flag;
+    if (currentFlag) currentFlag.src = currentMeta.flag;
     if (currentCode) currentCode.textContent = currentMeta.code;
     const metaTitles = {
       de:'GhaniWood | Möbelmontage & Schreinerservice in NRW',
