@@ -142,7 +142,7 @@ p{margin:0}
 .project-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:15px}
 .project-card{position:relative;border:0;padding:0;overflow:hidden;border-radius:15px;cursor:pointer;background:#ddd;text-align:left}
 .project-card[hidden]{display:none}
-.project-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease),filter .4s}
+.project-card img{width:100%;height:100%;object-fit:cover;object-position:center center;transition:transform .6s var(--ease),filter .4s;image-rendering:auto;backface-visibility:hidden;transform:translateZ(0)}
 .project-card:hover img{transform:scale(1.055);filter:brightness(.78)}
 .project-featured{grid-column:span 2;grid-row:span 2}
 .project-wide{grid-column:span 2}
