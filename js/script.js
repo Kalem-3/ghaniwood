@@ -67,6 +67,12 @@
   };
   let currentLang = safeStorage.get('ghaniwood-lang') || 'de';
 
+  const langMeta = {
+    de:{code:'DE',flag:'🇩🇪'},
+    en:{code:'EN',flag:'🇬🇧'},
+    tr:{code:'TR',flag:'🇹🇷'}
+  };
+
   const applyLanguage = (lang) => {
     if (!i18n[lang]) lang = 'de';
     currentLang = lang;
@@ -84,13 +90,22 @@
       const key = el.dataset.i18nPlaceholder;
       if (i18n[lang][key] !== undefined) el.placeholder = i18n[lang][key];
     });
-    languageCurrent.querySelector('span').textContent = lang.toUpperCase();
+    const currentMeta = langMeta[lang] || langMeta.de;
+    const currentFlag = languageCurrent.querySelector('.lang-flag');
+    const currentCode = languageCurrent.querySelector('.lang-code');
+    if (currentFlag) currentFlag.textContent = currentMeta.flag;
+    if (currentCode) currentCode.textContent = currentMeta.code;
     const metaTitles = {
       de:'GhaniWood | Möbelmontage & Schreinerservice in NRW',
       en:'GhaniWood | Furniture Assembly & Carpentry in NRW',
       tr:'GhaniWood | NRW Mobilya Montajı ve Marangozluk'
     };
     doc.title = metaTitles[lang];
+    languageMenu.querySelectorAll('[data-lang]').forEach((button) => {
+      const active = button.dataset.lang === lang;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-current', active ? 'true' : 'false');
+    });
   };
 
   languageCurrent.addEventListener('click', () => {
